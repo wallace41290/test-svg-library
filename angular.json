@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "svg-test": {
+      "projectType": "library",
+      "root": "projects/svg-test",
+      "sourceRoot": "projects/svg-test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/svg-test/tsconfig.lib.json",
+            "project": "projects/svg-test/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/svg-test/src/test.ts",
+            "tsConfig": "projects/svg-test/tsconfig.spec.json",
+            "karmaConfig": "projects/svg-test/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/svg-test/tsconfig.lib.json",
+              "projects/svg-test/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "test-lib"
 }

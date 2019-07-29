@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "svg-test": [
+        "dist/svg-test"
+      ],
+      "svg-test/*": [
+        "dist/svg-test/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
